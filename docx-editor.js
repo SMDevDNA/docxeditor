@@ -6,7 +6,6 @@ import {
 } from "docx";
 import { convertToString } from "./numConverter.js";
 
-const item_name = "Generator";
 let currentDate = new Date;
 let invoiceDate = currentDate.getDate() + "." + currentDate.getMonth() + "." + currentDate.getFullYear()
 
@@ -75,22 +74,3 @@ export function patchExample(item_name,price){
         fs.writeFileSync("invoice.docx", doc);
     });
 }
-
-/*paragraphStyles: [
-            {
-                id: "normalPara",
-                quickFormat: true,
-                run: {
-                    font: "Calibri",
-                    size: 26,
-                    bold: true,
-                },
-            }],
-        patches: {
-            invoiceDate: {
-                type: PatchType.PARAGRAPH,
-                children:  [ new Paragraph({
-                    style: "normalPara",
-                    text: invoiceDate
-                })],
-            },*/

@@ -7,11 +7,9 @@ const rl = readline.createInterface({
     output: process.stdout,
 });
 
-let counter;
-
 authorize().then(listMajors).catch(console.error).then(
 rl.question(`Which position?`, num => {
-    console.log(dataFromDB[parseInt(num-2)]);
     patchExample(dataFromDB[parseInt(num-2)][1],dataFromDB[parseInt(num-2)][9]);
+    console.log("Invoice is ready.");
     rl.close();
 }));
