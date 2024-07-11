@@ -1,6 +1,7 @@
 import { patchExample } from "./docx-editor.js"
 import { authorize, listMajors, dataFromDB } from "./google-sheets.js"
 import readline from 'node:readline';
+import express from 'express';
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -13,3 +14,34 @@ rl.question(`Which position?`, num => {
     console.log("Invoice is ready.");
     rl.close();
 }));
+
+
+
+
+
+const app = express();
+
+const port = 4300;
+
+app.use('/', (req, res) => {
+    // Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+    // Set to true if you need the website to include cookies in the requests sent
+    // to the API (e.g. in case you use sessions)
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.send(dataFromDB);
+
+});
+
+app.listen(port, () => {
+
+    console.log(`Сервер запущен на порту ${port}`);
+
+});
