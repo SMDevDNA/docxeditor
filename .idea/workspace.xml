@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e3ca63d-23d1-41aa-bc60-1b84ea5eb8e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docx-editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/docx-editor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/google-sheets.js" beforeDir="false" afterPath="$PROJECT_DIR$/google-sheets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice.docx" beforeDir="false" afterPath="$PROJECT_DIR$/invoice.docx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +21,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2iMyAxc5UjsypKfgYM2PvZlB8PC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ts.external.directory.path" value="E:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -60,6 +55,9 @@
       <workItem from="1719516794943" duration="9000" />
       <workItem from="1719516902089" duration="2000" />
       <workItem from="1719617483351" duration="215000" />
+      <workItem from="1720809703414" duration="623000" />
+      <workItem from="1721152824296" duration="1218000" />
+      <workItem from="1721224010541" duration="2041000" />
     </task>
     <servers />
   </component>
