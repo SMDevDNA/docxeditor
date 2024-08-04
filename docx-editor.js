@@ -7,7 +7,8 @@ import {
 import { convertToString } from "./numConverter.js";
 
 let currentDate = new Date;
-let invoiceDate = currentDate.getDate() + "." + currentDate.getMonth() + "." + currentDate.getFullYear()
+let invoiceDate = currentDate.getDate() + "." + currentDate.getMonth() + 1 + "." + currentDate.getFullYear();
+console.log(currentDate.getMonth() + 1);
 
 export function patchExample(item_name,price){
 

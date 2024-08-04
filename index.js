@@ -1,5 +1,5 @@
 import { patchExample } from "./docx-editor.js"
-import { authorize, listMajors, dataFromDB } from "./google-sheets.js"
+import { authorize, listMajors } from "./google-sheets.js"
 import readline from 'node:readline';
 import express from 'express';
 
@@ -8,13 +8,17 @@ const rl = readline.createInterface({
     output: process.stdout,
 });
 
-authorize().then(listMajors).catch(console.error).then(
+let dataFromDB;
+
+authorize().then(listMajors).then(data => {dataFromDB = data}).catch(console.error).then(
 rl.question(`Which position?`, num => {
     patchExample(dataFromDB[parseInt(num-2)][1],dataFromDB[parseInt(num-2)][9]);
     console.log("Invoice is ready.");
     rl.close();
 }));
 
+//стрелочная функция не имеет своего контекста this
+//https://www.youtube.com/watch?v=rePTJnUYxKs&ab_channel=wise.js
 
 
 

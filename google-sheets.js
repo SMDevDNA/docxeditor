@@ -8,8 +8,6 @@ const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
 const TOKEN_PATH = path.join(process.cwd(), 'token.json');
 const CREDENTIALS_PATH = path.join(process.cwd(), 'credentials.json');
 
-export let dataFromDB;
-
 async function loadSavedCredentialsIfExist() {
     try {
         const content = await fs.promises.readFile(TOKEN_PATH);
@@ -58,11 +56,11 @@ export async function listMajors(auth) {
         range: 'ГЕНЕРАТОРИ!A2:K',
     });
     const rows = res.data.values;
-    dataFromDB = rows;
     console.log('S/N, Назва:');
-    console.log(dataFromDB);
+    console.log(rows);
     if (!rows || rows.length === 0) {
         console.log('No data found.');
         return;
     }
+    return rows;
 }
