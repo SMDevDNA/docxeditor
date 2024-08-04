@@ -10,18 +10,17 @@ const rl = readline.createInterface({
 
 let dataFromDB;
 
-authorize().then(listMajors).then(data => {dataFromDB = data}).catch(console.error).then(
-rl.question(`Which position?`, num => {
-    patchExample(dataFromDB[parseInt(num-2)][1],dataFromDB[parseInt(num-2)][9]);
-    console.log("Invoice is ready.");
-    rl.close();
-}));
-
-//стрелочная функция не имеет своего контекста this
-//https://www.youtube.com/watch?v=rePTJnUYxKs&ab_channel=wise.js
-
-
-
+authorize()
+    .then(listMajors)
+    .then(data => {dataFromDB = data})
+    .then(
+        rl.question(`Which position?`, num => {
+            patchExample(dataFromDB[parseInt(num-2)][1],dataFromDB[parseInt(num-2)][9]);
+            console.log("Invoice is ready.");
+            rl.close();
+        })
+    )
+    .catch(console.error);
 
 const app = express();
 
